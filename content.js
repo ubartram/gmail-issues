@@ -1,4 +1,4 @@
-var shouldDebug = false
+var shouldDebug = false;
 
 var debug = function(message) {
 	if(shouldDebug) {
@@ -42,15 +42,31 @@ var initialize = function() {
     
 		var title = document.querySelectorAll(".hP")[0];
 		if (title != undefined) {
-			var aTag = document.createElement('a');
-    		aTag.setAttribute('href', 'https://issues.genexus.com/displaysearchissuesresults.aspx?' + standarizedTitle(title.innerText));
-    		aTag.setAttribute('style', 'font-size: small;');
-    		aTag.innerHTML = "Search Issue";
-	    	debug(title.innerText);
+		
+			var found = false;
+			var emailsList = document.querySelectorAll("span.g2");
+			var i;
+			var emailDir;
+			for (i = 0; i <	emailsList.length; i++) {
+			   	emailDir = emailsList[i].getAttribute("email");
+				debug("Found email address: " + emailDir);
+			   	if (emailDir == "rochaissues@genexus.com") {
+			   		found = true;
+			   		break;
+			   	}
+			}
+			
+			if (found) {
+				var aTag = document.createElement('a');
+    			aTag.setAttribute('href', 'https://issues.genexus.com/displaysearchissuesresults.aspx?' + standarizedTitle(title.innerText));
+    			aTag.setAttribute('style', 'font-size: small;');
+    			aTag.innerHTML = "Search Issue";
+		    	debug(title.innerText);
 
-    		title.parentNode.appendChild(aTag);
+    			title.parentNode.appendChild(aTag);
+    		}
 		}
 	}
-}
+};
 
 initialize();
