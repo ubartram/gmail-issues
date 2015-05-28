@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Gmail Issues",
+  "description": "Adds a link to Rocha Issues to Gmail",
+  "version": "0.1",
+
+  "permissions": [
+  ],
+  "content_scripts": [
+        {
+        "matches": [
+            "https://mail.google.com/*"
+            ],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+        }
+    ]
+}
