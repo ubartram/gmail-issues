@@ -1,3 +1,4 @@
+
 var shouldDebug = false;
 
 var debug = function(message) {
@@ -55,14 +56,14 @@ function isIssue() {
 var initialize = function() {
 	debug('gmail-issues add is running');
 
-	var title = document.querySelectorAll(".hP")[0];
+	var title = document.getElementsByClassName("hP")[0];
 	if (title != undefined) {
 		if (isIssue()) {
 			var aTag = document.createElement('a');
-			aTag.setAttribute('href', 'https://issues.genexus.com/displaysearchissuesresults.aspx?' + standarizedTitle(title.innerText));
+			aTag.setAttribute('href', 'https://issues.genexus.com/displaysearchissuesresults.aspx?' + standarizedTitle(title.textContent));
 			aTag.setAttribute('style', 'font-size: small;');
 			aTag.innerHTML = "Search Issue";
-	    	debug(title.innerText);
+			debug(title.textContent);
 
 			title.parentNode.appendChild(aTag);
 		}
