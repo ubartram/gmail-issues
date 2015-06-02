@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Gmail Issues
-// @namespace   https://mail.google.com/mail/
+// @namespace   https://github.com/matiash/gmail-issues
 // @description Adds a link to Issue Tracker to Gmail
-// @include     *
+// @include     https://mail.google.com/mail/*
 // @version     1.0
 // @grant       none
 // ==/UserScript==
