@@ -1,3 +1,11 @@
+// ==UserScript==
+// @name        Gmail Issues
+// @namespace   https://mail.google.com/mail/
+// @description Adds a link to Issue Tracker to Gmail
+// @include     *
+// @version     1.0
+// @grant       none
+// ==/UserScript==
 
 var shouldDebug = false;
 
