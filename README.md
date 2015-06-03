@@ -5,7 +5,7 @@ Gmail add-on to manage Rocha Issues
 ## Requirements
 This is a Chrome extension, you'll need Google Chrome
 ## Setup
-1. Copy manifest.json and content.js somewhere in your file system
+1. Copy manifest.json and content.user.js somewhere in your file system
 2. In Chrome, go to the extensions page (chrome://extensions/)
 3. Enable developer mode
 4. Choose "Load unpacked extension"
